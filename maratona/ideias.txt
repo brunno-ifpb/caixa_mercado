@@ -1,0 +1,43 @@
+pode ser bom adicionar algo que mostre os produtos que estão preste a acabar no estoque (ex: 10 unidades restantes ou utilizar uma ia que calcule a quantidade de produtos que são vendidos por dia e mostre a quantidade de dias que o produto vai durar no estoque)
+
+
+criar uma tela de login para acessar areas como a de gerencia de vendas e a de gerencia de estoque
+
+um login para a escolha de qual vendedor vai fazer a venda e enviar o nome do vendedor para o banco de dados vendas para que seja possivel fazer a gerencia de vendas por vendedor
+
+
+execusão da seção de gerencia de vendas {
+    compra com mair total - do dia e do meis
+    compra com maior lucro - do dia e do meis {
+        meneiras de executar isso: (
+            1 - pasar uma requisição ao banco de dados e pegar os dados de todas as compras e fazer a comparação
+            2 - pegar as datas de todas as compras e fazer a comparação com a data atual - a maior compra com ate 7 dias e a maior com ater 30 dias
+            retornar o toal da compra
+        )
+    }
+
+    uma tebela com as vendas semanais
+    uma tabela com as vendas mensais {
+        maneiras de fazer isso (
+            pegar os dados e somar de acordo com o dia para a tabela de vendas - os ultimos 7 dias - e fazer um grafico de linha
+            pegar os dados e somar de acordo com o dia para a tabela de vendas - os ultimos 30 dias - e fazer um grafico de linha
+        )
+    }
+
+    uma tabela com os lucros semanais 
+    uma tabela com os lucros mensais {
+        pegar os dados e somar de acordo com o dia para a tabela de lucros - os ultimos 7 dias - e fazer um grafico de linha
+        pegar os dados e somar de acordo com o dia para a tabela de lucros - os ultimos 30 dias - e fazer um grafico de linha
+    }
+
+    um grafo de pizza com os 5 produtos mais vendidos em vendas
+    um grafo de pizza com os 5 produtos mais vendidos em lucro {
+        maneiras de fazer isso {
+            retornar uma lista com os 5 produtos com mais vendas e fazer um grafico de pizza
+            retornar uma lista com os 5 produtos com mais lucros e fazer um grafico de pizza
+        }
+    }
+
+    um grafo de coluna dos trabalhadores que mais venderam em vendas e si eles atingiram a meta
+    
+}
