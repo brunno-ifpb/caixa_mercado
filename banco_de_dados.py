@@ -3,7 +3,7 @@ import os
 
 # criando o banco de dados
 # conectando com o banco de dados
-conn = sqlite3.connect('estoque.db')
+conn = sqlite3.connect('data_bases/estoque.db')
 data_base = conn.cursor()
 # configuração do banco de dados:
 # avera um codgo para cada produto
@@ -85,8 +85,7 @@ def adicionar(nome, quantidade, preco, lucro):
 
 def raspagem_estoque():
     data_base.execute("""SELECT * FROM estoque""")
-    produtos = data_base.fetchall()
-    return produtos
+    return data_base.fetchall()
 
 def lucros(produtos):  # codgo que recebe a lista de produtos vendidos e retorna o lucro de cada um
     produtos_lucros = {}
@@ -97,5 +96,19 @@ def lucros(produtos):  # codgo que recebe a lista de produtos vendidos e retorna
         produtos_lucros[i]  = a[0][0] * produtos[i]
 
     return produtos_lucros
+
+def alerta():
+    faltando = []
+
+    data_base.execute("SELECT nome, quantidade FROM estoque")
+    produtos = data_base.fetchall()
+    
+    
+    for produto in produtos:
+        if produto[1] <= 10:
+            faltando.append(produto)
+
+    return faltando
+
 
 

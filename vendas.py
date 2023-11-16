@@ -4,7 +4,7 @@ import matplotlib as plt
 from banco_de_dados import lucros
 
 
-conn = sqlite3.connect('vendas.db')
+conn = sqlite3.connect('data_bases/vendas.db')
 data_base = conn.cursor()
 
 
@@ -221,6 +221,3 @@ def produtos_mais_lucros():
 
 
 
-
-
-vendas_da_semana()
